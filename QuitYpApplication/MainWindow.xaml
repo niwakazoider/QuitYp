@@ -1,0 +1,27 @@
+﻿<Window x:Class="QuitYpApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuitYpApplication"
+        mc:Ignorable="d"
+        Title="QuitYP" Height="145" Width="351">
+    <Grid>
+        <Grid HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Stretch">
+            <TextBox x:Name="rawDataBox" HorizontalAlignment="Stretch" Margin="0" Text="" VerticalAlignment="Stretch" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" IsReadOnly="True"/>
+        </Grid>
+        <Grid x:Name="PinGrid" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="284" Visibility="Hidden">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="140"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="label" Content="PinCode" HorizontalAlignment="Left" Margin="0,10" VerticalAlignment="Bottom" Height="23"/>
+            <TextBox x:Name="textBox" Height="23" Margin="0,10" TextWrapping="Wrap" Text="" Width="120" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Column="1"/>
+            <Button x:Name="button" Content="OK" HorizontalAlignment="Right" Margin="0,10" VerticalAlignment="Bottom" Width="75" Height="23" Click="Button_Click" Grid.Column="2"/>
+        </Grid>
+        <StatusBar Height="23" HorizontalAlignment="Stretch" Margin="0,10,0,0" Name="StatusBar1" VerticalAlignment="Bottom">
+            <StatusBarItem Content="ポート:47144　(10分間体験版)"/>
+        </StatusBar>
+    </Grid>
+</Window>
